@@ -1,4 +1,7 @@
 # Go
+
+  inputs:
+    command: 'test'
 # Build your Go project.
 # Add steps that test, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/go
@@ -37,3 +40,7 @@ steps:
     go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
+
+- task: Go@0
+  inputs:
+    command: 'test app_test.go'
