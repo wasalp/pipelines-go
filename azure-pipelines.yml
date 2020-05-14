@@ -40,4 +40,4 @@ steps:
 
 - task: Go@0
   inputs:
-    command: 'test app_test.go'
+    command: 'test "./app_test.go"'
